@@ -1,0 +1,26 @@
+// poppins font family
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Belanosima:wght@700&family=Dancing+Script:wght@400;500;700&family=Lato&family=Poppins:wght@400;500;700&display=swap');
+@import "./scss/variable";
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  background-color: #eeeff1;
+  background-image: none;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-clip: border-box;
+  -webkit-text-fill-color: inherit;
+  font-family: 'Poppins', sans-serif;
+}
+
+.main {
+  padding: 20px 28px;
+  padding-top: $global-header-height;
+}
