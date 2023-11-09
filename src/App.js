@@ -1,21 +1,36 @@
 import './App.scss';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "./components/header/Header";
-import Description from "./components/description/Description";
-import Experience from "./components/experience/Experience";
-import Projects from "./components/projects/Projects";
-import ContactUs from "./components/contactus/Contactus";
+import { Box } from '@chakra-ui/react';
+import Home from './components/home/Home';
+import Footer from './components/footer/Footer';
+import WorkExperience from './components/WorkExperience/WorkExperience';
+import Resume from './components/resume/Resume';
+import About from './components/AboutMe/AboutMe';
+import Introduction from './components/AboutMe/AboutMe';
+import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <div className="main">
-        <Description />
-        <Experience />
-        <Projects />
-        <ContactUs />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Box className="App" bgGradient={[
+          'linear(to-tr, teal.300, yellow.400)',
+          'linear(to-t, blue.200, teal.500)',
+          'linear(to-b, orange.100, #fff4f9)',
+        ]}>
+        <Header />
+        <Box pt='100px'>
+          <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/home-intro" element={<Introduction />}></Route>
+              <Route path="/aboutme" element={<AboutMe />}></Route>
+              <Route path="/WorkExperience" element={<WorkExperience />}></Route>
+              <Route path="/resume" element={<Resume />}></Route>
+          </Routes>
+        </Box>
+        <Footer />
+      </Box>
+    </BrowserRouter>
   );
 }
 

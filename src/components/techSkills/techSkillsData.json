@@ -1,0 +1,48 @@
+[
+    {
+      "id": "random-uuid-9",
+      "imgUrl": "salesforce.png",
+      "label": "salesforce"
+    },
+    {
+      "id": "random-uuid-1",
+      "imgUrl": "html.png",
+      "label": "html"
+    },
+    {
+      "id": "random-uuid-2",
+      "imgUrl": "css.png",
+      "label": "css"
+    },
+    {
+      "id": "random-uuid-3",
+      "imgUrl": "sass.png",
+      "label": "sass"
+    },
+    {
+      "id": "random-uuid-4",
+      "imgUrl": "bootstrap.png",
+      "label": "bootstrap"
+    },
+    {
+      "id": "random-uuid-5",
+      "imgUrl": "javascript.png",
+      "label": "javascript"
+    },
+    {
+      "id": "random-uuid-6",
+      "imgUrl": "jquery.png",
+      "label": "jquery"
+    },
+    {
+      "id": "random-uuid-7",
+      "imgUrl": "react.png",
+      "label": "react"
+    },
+    {
+      "id": "random-uuid-8",
+      "imgUrl": "chakra-ui.png",
+      "label": "chakra-ui"
+    }
+  ]
+  
