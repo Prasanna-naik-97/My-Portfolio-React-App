@@ -6,21 +6,3 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  position: relative;
-  background-color: #eeeff1;
-  background-image: none;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-clip: border-box;
-  -webkit-text-fill-color: inherit;
-  font-family: 'Poppins', sans-serif;
-}
-
-.main {
-  padding: 20px 28px;
-  padding-top: $global-header-height;
-}
