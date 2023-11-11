@@ -1,59 +1,34 @@
-import { Box, Button, Flex, FormControl, FormErrorMessage, FormHelperText, FormLabel, Heading, Input, Textarea } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Box, Flex, Heading, Link } from '@chakra-ui/react'
+import React from 'react'
 import { Element } from 'react-scroll'
 
 const Contactus = () => {
-  const [input, setInput] = useState('')
-  const [message, setMessage] = useState('')
-
-  const handleEmailInputChange = (e) => setInput(e.target.value)
-  const isError = input === ''
-
-  const handleMessageInputChange = (e) => setMessage(e.target.value)
 
   return (
-    <Element name="contactus-form">
-      <Flex mt='50px' bgGradient='linear(to-r, #766a6a, #e6d4d4,  #766a6a)' gap='20px' borderRadius='25px' p='10' flexDirection={{base: 'column', lg: 'row'}}>
-        <Heading as='h2' size='xl' flex='40%'>
-          Want to get in touch?
-        </Heading>
-        <Box flex='60%'>
-          <form action="" method="post">
-            
-            <FormControl isRequired pt='4'>
-              <FormLabel>First name</FormLabel>
-              <Input placeholder='First name' />
-            </FormControl>
-
-            <FormControl isRequired pt='4'>
-              <FormLabel>Email</FormLabel>
-              <Input type='email' value={input} onChange={handleEmailInputChange} placeholder='Enter your email' />
-              {!isError ? (
-                <FormHelperText>
-                  Enter your email so that I can reach out to you.
-                </FormHelperText>
-              ) : (
-                <FormErrorMessage>Email is required.</FormErrorMessage>
-              )}
-            </FormControl>
-
-            <FormControl isRequired pt='4'>
-              <FormLabel>Message</FormLabel>
-              <Textarea
-                value={message}
-                onChange={handleMessageInputChange}
-                placeholder='Enter your message'
-                size='sm'
-              />
-            </FormControl>
-
-            <Button mt={4} colorScheme='teal' type='submit' mb='4'>
-              Submit
-            </Button>
-          </form>
-        </Box>
-      </Flex>
-    </Element>
+    <Box mb='50px' mt='50px'>
+      <Element name="contactus-form" className="contactUsElem">
+        <Heading as='h3' fontSize={22} color={'blue.600'} mb={5}>Contact</Heading>
+        <Heading as='h4' fontSize={25} mb={10}>Don't be shy! Hit me up! 👇</Heading>
+        <Flex gap={{base: '50px', xl: '100px'}} flexDirection={{base: 'column', xl: 'row'}}>
+          <Flex gap={5}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color='blue' viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-map-search"><path d="M11 18l-2 -1l-6 3v-13l6 -3l6 3l6 -3v7.5"></path><path d="M9 4v13"></path><path d="M15 7v5"></path><path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M20.2 20.2l1.8 1.8"></path></svg>
+              <Box>
+                <Heading as='h3' fontSize={20}>Location</Heading>
+                <Box>Bangalore, India</Box>
+              </Box>
+          </Flex>
+          <Flex gap={5}>
+            <Link href="mailto:naik.prasanna.49@gmail.com" display={'flex'} gap={'5'} textDecoration='none'>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color='blue' viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-mail"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path><path d="M3 7l9 6l9 -6"></path></svg>
+              <Box>
+                <Heading as='h3' fontSize={20}>Mail</Heading>
+                <Box>naik.prasanna.49@gmail.com</Box>
+              </Box>
+            </Link>
+          </Flex>
+        </Flex>
+      </Element>
+    </Box>
   )
 }
 
