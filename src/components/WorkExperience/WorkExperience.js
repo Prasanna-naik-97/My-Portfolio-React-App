@@ -3,6 +3,7 @@ import dentsuLogo from "../../assets/images/techIcons/denstu.jpg";
 import mindtreeLogo from "../../assets/images/techIcons/mindtree.jpg";
 import smc2Logo from "../../assets/images/techIcons/smc2.jpg";
 import React from 'react'
+import { Element } from 'react-scroll';
 
 const WorkExperience = () => {
   const dentsu = {
@@ -76,19 +77,21 @@ const WorkExperience = () => {
   }]
 
   return (
-    <Box>
-        <Box mb='5' pb='6' color='#110e0e' fontSize={{base: '40px', lg: '40px'}}>Professional Experience</Box>
-        <Container>
-            {experiences.map((company) => (
-                <Box sx={company.style} position='relative'>
-                    <Box pl='8' pb='20' borderLeft='2px solid #34b7a7'>
-                        <Heading as='h4' fontSize='24' pt='2'>{company.companyName}</Heading>
-                        <Box bgGradient='linear(to-r, green.200, pink.500)' p='2' my='3' display='inline-block' borderRadius='50'>{company.role}</Box>
-                        <p><em>{company.place}</em></p>
+    <Box pt='10'>
+        <Element name="experience" className="experienceElem">
+            <Box mb='5' pb='6' fontSize='20px' color='blue.600' fontWeight='700' >Professional Experience</Box>
+            <Container>
+                {experiences.map((company) => (
+                    <Box sx={company.style} position='relative'>
+                        <Box pl='8' pb='20' borderLeft='2px solid #34b7a7'>
+                            <Heading as='h4' fontSize='24' pt='2'>{company.companyName}</Heading>
+                            <Box bgGradient='linear(to-r, green.200, pink.500)' p='2' my='3' display='inline-block' borderRadius='50'>{company.role}</Box>
+                            <p><em>{company.place}</em></p>
+                        </Box>
                     </Box>
-                </Box>
-            ))}
-        </Container>
+                ))}
+            </Container>
+        </Element>
     </Box>
   )
 }
