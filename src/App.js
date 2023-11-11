@@ -13,11 +13,9 @@ import AboutMe from './components/AboutMe/AboutMe';
 function App() {
   return (
     <BrowserRouter>
-      <Box className="App" bgGradient={[
-          'linear(to-tr, teal.300, yellow.400)',
-          'linear(to-t, blue.200, teal.500)',
-          'linear(to-b, orange.100, #fff4f9)',
-        ]}>
+      <Box className="App" background={'#fff4f9'} bgGradient={[
+      'linear(to-b, gray.300, #fff4f9)',
+    ]}>
         <Header />
         <Box pt='100px'>
           <Routes>
