@@ -59,21 +59,24 @@ const WorkExperience = () => {
     role: 'SFCC Senior Front End Developer',
     period: '2022-23',
     place: 'Bangalore, India',
-    style: dentsu 
+    style: dentsu,
+    id: 1
   },
   {
     companyName: 'Mindtree',
     role: 'SFCC Front End Developer',
     period: '2021-22',
     place: 'Bangalore, India',
-    style: mindtree
+    style: mindtree,
+    id: 2
   },
   {
     companyName: 'Smc2',
     role: 'SFCC UI Developer',
     period: '2019-21',
     place: 'Bangalore, India',
-    style: smcSquared
+    style: smcSquared,
+    id: 3
   }]
 
   return (
@@ -82,7 +85,7 @@ const WorkExperience = () => {
             <Box mb='5' pb='6' fontSize='20px' color='blue.600' fontWeight='700' >Professional Experience</Box>
             <Container>
                 {experiences.map((company) => (
-                    <Box sx={company.style} position='relative'>
+                    <Box sx={company.style} position='relative' key={company.id}>
                         <Box pl='8' pb='20' borderLeft='2px solid #34b7a7'>
                             <Heading as='h4' fontSize='24' pt='2'>{company.companyName}</Heading>
                             <Box bgGradient='linear(to-r, green.200, pink.500)' p='2' my='3' display='inline-block' borderRadius='50'>{company.role}</Box>
