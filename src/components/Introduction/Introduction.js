@@ -10,7 +10,7 @@ import github from "../../assets/images/techIcons/github.svg";
 const Introduction = () => {
   return (
     <Element name="home-intro">
-        <Flex className="description" gap={{base: '0', lg: '116'}} direction={{base: 'column', lg: 'row'}} alignItems={{base: 'center', lg: 'center'}}>
+        <Flex className="description" gap={{base: '0', lg: '116'}} justifyContent={'left'} direction={{base: 'column', lg: 'row'}} alignItems={{base: 'center', lg: 'center'}}>
             <Box position='relative' order={{base: '2', lg: '1'}}>
                 <Heading as='h1'>SFCC Front-End Developer</Heading>
                 <Image borderRadius='100%' src={handWave} alt='Profile Picture' position='absolute' top='0' right='10px' height='56px' />
@@ -23,9 +23,6 @@ const Introduction = () => {
                     <Image width={{base: '45px', xl: '50px'}} height={'auto'} src={github} alt='github' />
                   </a>
                 </Flex>
-            </Box>
-            <Box order={{base: '1', lg: '2'}}>
-                <Image borderRadius='100%' src='assets/images/profile.png' alt='Profile Picture' margin='0 auto' height={{base: '250px', xl: '350px'}} width={{base: '250px', xl: '350px'}} />
             </Box>
         </Flex>
     </Element>
